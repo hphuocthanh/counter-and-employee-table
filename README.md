@@ -10,6 +10,10 @@ This project is currently in development. Users can increment, reset the counter
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
+Open Terminal, Run:
+
+`cd frontend`
+
 Installation:
 
 `npm install`  
