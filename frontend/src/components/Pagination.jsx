@@ -9,7 +9,7 @@ function Pagination({ employeesPerPage, totalEmployees, paginate}) {
 
 
     return (
-        <nav>
+        <nav class="mb-5">
             <ul className="pagination">
                 {pageNumbers.map(num => (
                     <li key={num} className="page-item">

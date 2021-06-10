@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react"
 import axios from "axios"
 import Employees from "./Employees"
 import Pagination from "./Pagination"
+import AddEmployee from "./EmployeeForm"
 
 function EmpTable() {
   const [employees, setEmployees] = useState([])
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
   const [employeesPerPage] = useState(5)
+  const [isNewEmpAdded, setIsNewEmpAdded] = useState(false)
 
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -30,6 +32,11 @@ function EmpTable() {
   // Change page
   const paginate = (num) => setCurrentPage(num)
 
+  const addNewEmp = (newEmpInfo) => {
+    newEmpInfo.id = employees.length + 1
+    setEmployees(prevEmployees => ([...prevEmployees, newEmpInfo]))
+    setIsNewEmpAdded(true)
+  }
 
   return (
     <div className="container">
@@ -45,6 +52,7 @@ function EmpTable() {
         <Employees employees={currentEmployees} loading={loading} />
       </table>
       <Pagination employeesPerPage={employeesPerPage} totalEmployees={employees.length} paginate={paginate}/>
+      <AddEmployee addNewEmp={addNewEmp} isNewEmpAdded={isNewEmpAdded}/>
     </div>
   )
 }
