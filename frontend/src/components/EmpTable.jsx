@@ -9,7 +9,6 @@ function EmpTable() {
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
   const [employeesPerPage] = useState(5)
-  const [isNewEmpAdded, setIsNewEmpAdded] = useState(false)
 
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -35,7 +34,6 @@ function EmpTable() {
   const addNewEmp = (newEmpInfo) => {
     newEmpInfo.id = employees.length + 1
     setEmployees(prevEmployees => ([...prevEmployees, newEmpInfo]))
-    setIsNewEmpAdded(true)
   }
 
   return (
@@ -52,7 +50,7 @@ function EmpTable() {
         <Employees employees={currentEmployees} loading={loading} />
       </table>
       <Pagination employeesPerPage={employeesPerPage} totalEmployees={employees.length} paginate={paginate}/>
-      <AddEmployee addNewEmp={addNewEmp} isNewEmpAdded={isNewEmpAdded}/>
+      <AddEmployee addNewEmp={addNewEmp}/>
     </div>
   )
 }

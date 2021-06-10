@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "bootstrap/js/dist/modal";
 
-function EmployeeForm({ addNewEmp, isNewEmpAdded }) {
+function EmployeeForm({ addNewEmp }) {
   const [newEmpInfo, setNewEmpInfo] = useState({
     id: "",
     name: "",
@@ -23,7 +23,7 @@ function EmployeeForm({ addNewEmp, isNewEmpAdded }) {
   useEffect(() => {
     modalRef.current.click()
   }, [showModal]);
-  
+
   return (
     <div className="container">
       {/* Button trigger modal */}
