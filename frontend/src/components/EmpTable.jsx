@@ -14,7 +14,7 @@ function EmpTable() {
     const fetchEmployees = async () => {
       setLoading(true)
       const res = await axios.get(
-        "https://60c130fdb8d3670017556a10.mockapi.io/api/employees"
+        "http://localhost:8080/employees"
       )
       setEmployees(res.data)
       setLoading(false)
