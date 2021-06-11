@@ -21,7 +21,7 @@ When you’re done, go ahead and launch IntelliJ IDEA.
 
 ### Setup
 
-Clone down this repository. 
+Clone down this repository. Do the following steps:
 
 #### backend
 
