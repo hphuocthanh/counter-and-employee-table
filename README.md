@@ -9,7 +9,7 @@ This project is currently in development. Users can increment, reset the counter
 ## Installation and Setup Instructions
 
 ### Prerequisites
-[IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows)
+[IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) or [Spring Tool Suite 4](https://spring.io/tools/)
 
 [JDK 6 or later](https://www.oracle.com/java/technologies/javase-downloads.html)
 
@@ -33,7 +33,7 @@ Clone down this repository. Do the following steps:
 
 * Run BackendApplication
 
-* To visit project: `localhost:8080/employees`  
+* To visit project: `localhost:9090/employees`  
 
 #### frontend
 
